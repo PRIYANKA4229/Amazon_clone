@@ -6,18 +6,19 @@
 }
 
 .navbar {
-    height: 60px;
+    height: auto; /* Allow navbar to grow with content */
     background-color: #0f1111;
     color: white;
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
-    justify-content: space-between; /* Adjusted for responsiveness */
-    padding: 0 15px;
+    padding: 10px 15px;
+    text-align: center; /* Center-align text */
 }
 
 .nav-logo {
     height: 50px;
-    width: 100px;
+    width: 80px; /* Adjusted for smaller screens */
 }
 
 .logo {
@@ -27,233 +28,148 @@
     width: 100%;
 }
 
-.border {
-    border: 1.5px solid transparent;
-}
-
-.border:hover {
-    border: 1.5px solid white;
-}
-
-.add-first {
-    color: #CCCCCC;
-    font-size: 0.85rem;
-    margin-left: 15px;
-}
-
-.add-second {
-    font-size: 1rem;
-    margin-left: 3px;
-}
-
-.add-icon {
-    display: flex;
-    align-items: center;
+.add-first, .add-second {
+    font-size: 0.75rem; /* Reduce font size for smaller screens */
 }
 
 .nav-search {
     display: flex;
-    background-color: #febd68;
-    width: 60%;
+    width: 90%; /* Make search bar wider on small screens */
     height: 40px;
+    margin-top: 10px;
     border-radius: 4px;
     overflow: hidden;
 }
 
-.nav-search:hover {
-    border: 2px solid orange;
-}
-
 .search-select {
-    background-color: #f3f3f3;
-    width: 50px;
-    text-align: center;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    width: 40px; /* Adjust width */
+    font-size: 0.8rem; /* Smaller font */
 }
 
 .search-input {
     flex-grow: 1;
-    font-size: 1rem;
-    border: none;
+    font-size: 0.9rem;
 }
 
 .search-icon {
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    background-color: #febd68;
-    color: #0f1111;
+    width: 40px;
+    font-size: 1rem;
 }
 
 /** Panel **/
 .panel {
-    height: 40px;
-    background-color: #222f3d;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-direction: column; /* Stack panel items vertically */
+    text-align: center;
+    padding: 10px;
 }
 
 .panel-ops {
-    width: 70%;
-    font-size: 0.85rem;
-}
-
-.panel-ops p {
-    display: inline;
-    margin-left: 15px;
+    font-size: 0.75rem; /* Reduce font size */
+    margin: 5px 0;
 }
 
 .panel-deals {
-    font-size: 0.9rem;
-    font-weight: 700;
+    font-size: 0.8rem;
 }
 
 /** Hero Section **/
 .hero-section {
-    background-image: url("hero_image.jpg");
-    height: 380px;
+    height: 200px; /* Reduce height */
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
     align-items: flex-end;
+    justify-content: center;
 }
 
 .hero-message {
-    background-color: white;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    width: 80%;
-    margin-bottom: 25px;
-}
-
-.hero-message a {
-    color: #007185;
+    width: 90%; /* Fit screen size */
+    font-size: 0.8rem; /* Smaller text */
+    margin-bottom: 15px;
 }
 
 /** Shop Section **/
 .shop-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #e2e7e6;
-    padding: 15px;
-    gap: 15px;
+    justify-content: center; /* Center boxes */
+    gap: 10px; /* Add spacing */
+    padding: 10px;
 }
 
 .box {
-    border: 2px solid black;
-    height: 400px;
-    flex: 1 1 calc(25% - 20px); /* Four boxes per row with spacing */
-    max-width: calc(25% - 20px); /* Ensure max-width aligns with flex */
+    flex: 1 1 100%; /* One box per row */
+    max-width: 100%;
+    height: auto; /* Allow flexible height */
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
 .box-img {
-    height: 300px;
-    background-size: cover;
-    margin: 1rem 0;
-}
-
-.box-content {
-    margin: 0 1rem;
-}
-
-.box-content p {
-    color: #222f3d;
+    height: 200px; /* Adjust height for smaller screens */
+    margin: 10px 0;
 }
 
 /** Footer **/
-.foot-panel1 {
-    background-color: #37475a;
-    color: white;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.85rem;
+.foot-panel1, .foot-panel2, .foot-panel3, .foot-panel4 {
+    font-size: 0.7rem; /* Smaller font size */
+    text-align: center;
 }
 
 .foot-panel2 {
-    background-color: #222f3d;
-    color: white;
-    height: 300px;
-    display: flex;
-    flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
-    justify-content: space-evenly;
-    padding: 20px;
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px;
 }
 
-.foot-panel2 a {
-    display: block;
-    font-size: 0.85rem;
-    margin-top: 10px;
-    color: #dddddd;
-}
-
-.foot-panel3 {
-    background-color: #222f3d;
-    color: white;
-    border-top: 0.5px solid white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.foot-panel4 {
-    background-color: #0f1111;
-    color: white;
-    font-size: 0.7rem;
-    text-align: center;
-    height: 80px;
-}
-
-/** Responsive Design **/
-@media (max-width: 1200px) {
-    .nav-search {
-        width: 50%;
-    }
-
-    .shop-section .box {
-        flex: 1 1 calc(33.33% - 20px); /* Three boxes per row */
-    }
-}
-
-@media (max-width: 768px) {
+/** Media Queries for Phones **/
+@media (max-width: 480px) {
     .navbar {
         flex-direction: column;
-        height: auto;
-        padding: 10px 0;
+    }
+
+    .nav-logo {
+        width: 60px; /* Smaller logo */
+        height: 40px;
     }
 
     .nav-search {
-        width: 80%;
-        margin: 10px 0;
+        width: 100%; /* Full width */
     }
 
-    .shop-section .box {
-        flex: 1 1 calc(50% - 20px); /* Two boxes per row */
+    .search-select {
+        width: 35px; /* Smaller select box */
     }
-}
 
-@media (max-width: 480px) {
+    .search-icon {
+        font-size: 0.9rem;
+    }
+
     .panel {
         flex-direction: column;
-        text-align: center;
     }
 
-    .shop-section .box {
-        flex: 1 1 100%; /* One box per row */
+    .hero-section {
+        height: 150px; /* Further reduce height */
+    }
+
+    .hero-message {
+        font-size: 0.7rem;
+    }
+
+    .shop-section {
+        gap: 8px;
+    }
+
+    .box {
+        padding: 8px;
+    }
+
+    .box-img {
+        height: 150px; /* Smaller image */
+    }
+
+    .foot-panel2 {
+        padding: 8px;
     }
 }
